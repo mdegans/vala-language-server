@@ -49,7 +49,7 @@ conf_file = configure_file(input: 'config.vala.in',
                            output: 'config.vala',
                            configuration: conf)
 
-add_project_arguments(['--enable-gobject-tracing', '--fatal-warnings'], language: 'vala')
+add_project_arguments(['--enable-gobject-tracing'], language: 'vala')
 
 extra_vala_sources = files([
   'src/util.vala',
