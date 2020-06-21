@@ -33,7 +33,8 @@ if libjsonrpc_glib_dep.version() >= '3.30'
 endif
 
 # let Vala add the appropriate defines for GLIB_X_X
-add_project_arguments(['--target-glib=auto'], language: 'vala')
+# this breaks on 18.04 aarch64 (and maybe other 18.04)
+# add_project_arguments(['--target-glib=auto'], language: 'vala')
 
 if get_option('debug_mem')
   libgobject_list_proj = subproject('gobject-list-prince781')
